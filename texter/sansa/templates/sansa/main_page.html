@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Texter</title>
+</head>
+<body>
+	<h3>Type your text:</h3>
+	<form action="{% url 'text_create_url' %}" method="post">
+		{% csrf_token %}
+		{% for field in form %}
+			{{field}}
+			<button type="submit">Submit</button>
+		{% endfor %}
+		
+	</form>
+
+</body>
+</html>
