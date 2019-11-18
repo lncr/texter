@@ -10,6 +10,8 @@ from time import time
 def main_page(request):
 	if request.method == 'POST':
 		form = TextForm(request.POST)
+		#works perfectly on my pc, but when activated with django just doesn't create file.
+		# I hope I'm missing something
 		if form.is_valid():
 			text = form.cleaned_data['body']
 			img = Image.sadqwqe12create(static('bek.jpg'))
